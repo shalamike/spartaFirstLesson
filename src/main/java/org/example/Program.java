@@ -9,7 +9,7 @@ public class Program {
         else if (time > 12 && time <= 18){
             return "good afternoon";
         }
-        else if ((time < 5 && time >= 0) || (time > 18 && time <=24)){
+        else if ((time >= 0  && time < 5) || (time > 18 && time <=24)){
             return "good night";
         }
         else {

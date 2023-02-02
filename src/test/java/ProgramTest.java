@@ -42,4 +42,15 @@ public class ProgramTest {
     }
 
 
+    @ParameterizedTest
+    @ValueSource(ints = {1, 3, 23, 20})
+    @DisplayName("given a time between 1800 and 0500, the greeting should be good night ")
+    public void GivenTimeBetween1800and0500_SayGoodNight(int time){
+        String expected = "good night";
+        String result = Program.greeting(time);
+        Assertions.assertEquals(expected, result);
+    }
+
+
+
 }
