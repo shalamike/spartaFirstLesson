@@ -51,6 +51,17 @@ public class ProgramTest {
         Assertions.assertEquals(expected, result);
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {100,223,26, 90978, -2, 25})
+    @DisplayName("lets get some incorrect greetings")
+    public void IncorrectGreetingsTest(int time){
+        String expected = "Invalid time";
+        String result = Program.greeting(time);
+        Assertions.assertEquals(expected,result);
+
+    }
+
+
 
 
 }
